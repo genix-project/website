@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/uikit.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/slide.css" />
     <link rel="icon" type="image/ico" href="assets/images/logo/favicon.ico">
     <script src="assets/js/uikit.min.js"></script>
     <script src="assets/js/uikit-icons.min.js"></script>
@@ -18,25 +19,25 @@
     <script>
         window.onload = loadDoc('https://genix.cx/data.php');
         function loadDoc(content_name) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("genixsupply").innerHTML = Number(this.responseText).toLocaleString(undefined, {maximumFractionDigits:2,  maximumFractionDigits: 2})+" "+"GENIX";
-            }
-        };
-        xhttp.open("GET",content_name , true);
-        xhttp.send();
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("genixsupply").innerHTML = Number(this.responseText).toLocaleString(undefined, { maximumFractionDigits: 2, maximumFractionDigits: 2 }) + " " + "GENIX";
+                }
+            };
+            xhttp.open("GET", content_name, true);
+            xhttp.send();
         }
 
         function loadDocMN(content_name) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("mnCount").innerHTML = Number(this.responseText).toLocaleString(undefined, {maximumFractionDigits:2,  maximumFractionDigits: 2})+" "+"Masternodes";
-            }
-        };
-        xhttp.open("GET",content_name , true);
-        xhttp.send();
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("mnCount").innerHTML = Number(this.responseText).toLocaleString(undefined, { maximumFractionDigits: 2, maximumFractionDigits: 2 }) + " " + "Masternodes";
+                }
+            };
+            xhttp.open("GET", content_name, true);
+            xhttp.send();
         }
 
         $(function () {
@@ -53,10 +54,10 @@
                     var $sectionHeight = $("#fold1").outerHeight() * 1.19;
                 }
 
-                $myNav.toggleClass('uk-hidden', $(this).scrollTop() > $sectionHeight * 0.6);
+                $myNav.toggleClass('uk-hidden', $(this).scrollTop() > $sectionHeight * 0.2);
                 $toTop.toggleClass('uk-hidden', $(this).scrollTop() < $sectionHeight * 1.5);
             });
-        });        
+        });
 
     </script>
 
@@ -94,8 +95,8 @@
                                 <a class="header-link" uk-scroll href="#why-blockchain">Genix Blockchain</a>
                             </li>
                             <li>
-                                    <a class="header-link" uk-scroll href="#coin-info">Genix Coin Info</a>
-                                </li>
+                                <a class="header-link" uk-scroll href="#coin-info">Genix Coin Info</a>
+                            </li>
                             <li>
                                 <a class="header-link" uk-scroll href="#wallets">Wallets</a>
                             </li>
@@ -106,7 +107,8 @@
                                 <a class="header-link" href="http://explorer.genix.cx">Block Explorer</a>
                             </li>
                             <li>
-                                <a style="color:#65e52c !important;" class="header-link" href="https://teespring.com/stores/genix-store">Genix Store</a>
+                                <a style="color:#65e52c !important;" class="header-link"
+                                    href="https://teespring.com/stores/genix-store">Genix Store</a>
                             </li>
                         </ul>
                         <!--Off Canvas Toggle-->
@@ -139,18 +141,41 @@
                                 our planet by bringing<br>
                                 back our trees through <br>
                                 reforestation
+                                <br>
+                                <br>
+
 
                             </h1>
                         </div>
-
                     </div>
+                    <!-- <div id="slideshow">
+                        <div class="uk-position-relative uk-visible-toggle uk-dark" uk-slideshow>
 
+                            <ul class="uk-slideshow-items">
+                                <li>
+                                    <img src="assets/images/slide/1.jpg" alt="sample caption #1" uk-cover>
+                                </li>
+                                <li>
+                                    <img src="assets/images/slide/2.jpg" alt="sample caption #2" uk-cover>
+                                </li>
+                                <li>
+                                    <img src="assets/images/slide/3.jpg" alt="sample caption #3" uk-cover>
+                                </li>
+                            </ul>
+
+                            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
+                                uk-slidenav-previous uk-slideshow-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#"
+                                uk-slidenav-next uk-slideshow-item="next"></a>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
-<!--
+    <!--
     <div id="what-is-genix" class=" uk-section-default tm-section-texture uk-grid-collapse uk-text-center">
         <div class="uk-section uk-text-center">
             <div class="uk-section uk-container">
@@ -179,59 +204,54 @@
     </div>
 -->
     <div id="coin-info"
-    style="background-image: linear-gradient(to left bottom, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8);"
-    class=" uk-section-default tm-section-texture uk-grid-collapse uk-text-center">
-    <div class="uk-section uk-text-center">
-        <div class="uk-section uk-container">
+        style="background-image: linear-gradient(to left bottom, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8, #f6f6f8);"
+        class=" uk-section-default tm-section-texture uk-grid-collapse uk-text-center">
+        <div class="uk-section uk-text-center">
+            <div class="uk-section uk-container">
 
                 <div class="uk-grid-small" uk-grid>
-                        
-                        <div class="uk-width-1-2@m uk-width-1-2@s">
 
-                            <h2 class=" uk-text-left" style="color: green">The Genix Belief</h2>
-                            <h3 class=" uk-text-left" style="color: turquoise">Genix is built on the belief that everyone
-                                can and should
-                                protect the environment.<br>
-                                The borderless nature of the blockchain furthers our mission. Reforestation just got even
-                                more global!
-                            </h3>
-                                   
-                            <div class="uk-hidden@m">
-                                <br>
-                                <br>
-                            </div>
-                        </div>
+                    <div class="uk-width-1-2@m uk-width-1-2@s">
 
-                        <div class="uk-text-left uk-width-1-2@m uk-width-1-2@s">
-                            <h2 class=" uk-text-left" style="color: green">Get Genix Funding</h2>
-                            <h3 class=" uk-text-left" style="color: turquoise">
-                                A call to reforestation & nursery organizations/individuals globally. Get approved for a GENIX masternode with the 
-                                possibility of additional funding in the future.
-                            </h3>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCRbLodIFT7q-jse9TbHRs8Cl6kHQjPwbhGgvtV7wN8TC6Zg/viewform"
-                             class="uk-button uk-button-default" style="background-color: turquoise;">Get Started</a>
+                        <h2 class=" uk-text-left" style="color: green">The Genix Belief</h2>
+                        <p class=" uk-text-left" style="color: rgb(0, 0, 0)">Genix is built on the belief that everyone
+                            can and should
+                            protect the environment.<br>
+                            The borderless nature of the blockchain furthers our mission. Reforestation just got even
+                            more global!
+                        </p>
+
+                        <div class="uk-hidden@m">
+                            <br>
+                            <br>
                         </div>
-    
-    
-                       
                     </div>
-    
-                </div>
 
-            <div style="padding: 0 20px 0 20px;">
-                <h2 class="why-blockchain uk-heading-line uk-text-center"><span style="color: green !important;">
-                 Buying a T-shirt plants up to 6 trees!</span></h2>
-            </div>
-            <div style="padding: 0 20px 0 20px;" class="uk-grid-small" uk-grid>
+                    <div class="uk-text-left uk-width-1-2@m uk-width-1-2@s">
+                        <h2 class=" uk-text-left" style="color: green">Get Genix Funding</h2>
+                        <p class=" uk-text-left" style="color: rgb(0, 0, 0)">
+                            A call to reforestation & nursery organizations/individuals globally. Get approved for a
+                            GENIX masternode with the
+                            possibility of additional funding in the future.
+                        </p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCRbLodIFT7q-jse9TbHRs8Cl6kHQjPwbhGgvtV7wN8TC6Zg/viewform"
+                            class="uk-button uk-button-default" style="background-color: turquoise;">Get Started</a>
+                    </div>
+                </div>
+                <div style="padding: 0 20px 0 20px;">
+                    <h2 class="why-blockchain uk-heading-line uk-text-center"><span style="color: green !important;">
+                            Buying a T-shirt plants up to 6 trees!</span></h2>
+                </div>
+                <div style="padding: 0 20px 0 20px;" class="uk-grid-small" uk-grid>
                     <div class="uk-width-1-3@m uk-width-1-4@s">
 
                     </div>
                     <div class="uk-width-1-3@m uk-width-1-2@s">
-                            <p>
-                                This store is designed to maximise our reach to reforestation
-                                and tree planting projects, with 100% of the sales profits
-                                donated directly to our tree-planting partners!
-                            </p>
+                        <p>
+                            This store is designed to maximise our reach to reforestation
+                            and tree planting projects, with 100% of the sales profits
+                            donated directly to our tree-planting partners!
+                        </p>
                     </div>
 
                     <div class="uk-width-1-3@m uk-width-1-4@s">
@@ -240,52 +260,61 @@
                 </div>
 
             </div>
-    
+
             <br>
             <div class="uk-child-width-1-2 uk-child-width-1-4@m uk-grid-match uk-grid-collapse uk-text-center" uk-grid>
-                    <div>
+                <div>
 
-                        <div class="uk-inline">
-                            <img src="assets/images/store/hoodie.jpg" alt="Genix Hoodie Image">
-                            <div style="background-color: transparent !important;">
-                                <p> <a style="color: green !important;" target="_blank" href = "https://teespring.com/en-GB/genix-hoodie?page=1&tsmac=store&tsmic=genix-store#pid=212&cid=5820&sid=front">Genix Hoodie</a> </p>
-                            </div>
+                    <div class="uk-inline">
+                        <img src="assets/images/store/hoodie.jpg" alt="Genix Hoodie Image">
+                        <div style="background-color: transparent !important;">
+                            <p> <a style="color: green !important;" target="_blank"
+                                    href="https://teespring.com/en-GB/genix-hoodie?page=1&tsmac=store&tsmic=genix-store#pid=212&cid=5820&sid=front">Genix
+                                    Hoodie</a> </p>
                         </div>
-                
                     </div>
-                    <div>
-                
-                        <div class="uk-inline">
-                            <img src="assets/images/store/tee.jpg" alt="Genix Classic Tee Image">
-                            <div style="background-color: transparent !important;">
-                                <p> <a style="color: green !important;" target="_blank" href = "https://teespring.com/en-GB/classic-tee-9967?page=1&tsmac=store&tsmic=genix-store#pid=2&cid=2397&sid=front">Genix Classic Tee</a> </p>
-                            </div>
+
+                </div>
+                <div>
+
+                    <div class="uk-inline">
+                        <img src="assets/images/store/tee.jpg" alt="Genix Classic Tee Image">
+                        <div style="background-color: transparent !important;">
+                            <p> <a style="color: green !important;" target="_blank"
+                                    href="https://teespring.com/en-GB/classic-tee-9967?page=1&tsmac=store&tsmic=genix-store#pid=2&cid=2397&sid=front">Genix
+                                    Classic Tee</a> </p>
                         </div>
-                
                     </div>
-                    <div>
-                
-                        <div class="uk-inline">
-                            <img src="assets/images/store/sticker.jpg" alt="Genix Sticker Image">
-                            <div style="background-color: transparent !important;">
-                                <p> <a style="color: green !important;" target="_blank" href = "https://teespring.com/en-GB/genix-die-cut-sticker?page=1&tsmac=store&tsmic=genix-store#pid=794&cid=103544&sid=front">Genix Sticker</a> </p>
-                            </div>
+
+                </div>
+                <div>
+
+                    <div class="uk-inline">
+                        <img src="assets/images/store/sticker.jpg" alt="Genix Sticker Image">
+                        <div style="background-color: transparent !important;">
+                            <p> <a style="color: green !important;" target="_blank"
+                                    href="https://teespring.com/en-GB/genix-die-cut-sticker?page=1&tsmac=store&tsmic=genix-store#pid=794&cid=103544&sid=front">Genix
+                                    Sticker</a> </p>
                         </div>
-                
                     </div>
-                    <div>
-                
-                        <div class="uk-inline">
-                            <img class="uk-position-center" src="assets/images/store/right-arrow.png" height="50%"width="50%" alt="More Genix Products Image">
-                            <div class="uk-position-large uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
-                                <a style="color: green !important;" target="_blank" href = "https://teespring.com/stores/genix-store?page=1">More Genix Products</a> 
-                            </div>
+
+                </div>
+                <div>
+
+                    <div class="uk-inline">
+                        <img class="uk-position-center" src="assets/images/store/right-arrow.png" height="50%"
+                            width="50%" alt="More Genix Products Image">
+                        <div
+                            class="uk-position-large uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
+                            <a style="color: green !important;" target="_blank"
+                                href="https://teespring.com/stores/genix-store?page=1">More Genix Products</a>
                         </div>
-                
                     </div>
+
+                </div>
             </div>
 
-            
+
         </div>
     </div>
     </div>
@@ -297,15 +326,16 @@
             <div class="uk-container">
                 <h1 style="color: green" class="uk-heading-line uk-text-center"><span>The Genix Reason</span></h1>
 
-                <div style="margin-top: 70px" class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
+                <div style="margin-top: 70px"
+                    class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
 
                     <!--Grid 1-->
 
                     <div>
                         <p style="color: white;">
-                            <img src="assets/images/smoke.svg" width="120" height="120" uk-svg>
+                            <img src="assets/images/smoke.png" width="120" height="120" uk-png>
                         </p>
-                        <h3 style="color:brown">
+                        <h3 style="color:green">
                             Climate Change
                         </h3>
                         <p class="uk-margin-medium">
@@ -319,10 +349,10 @@
 
                     <!--Grid 2-->
                     <div>
-                        <p style="color: green;">
+                        <p style="color: rgb(0, 0, 0);">
                             <img src="assets/images/reforest.svg" width="120" height="120" uk-svg>
                         </p>
-                        <h3 style="color:brown">
+                        <h3 style="color:green">
                             Reforestation
                         </h3>
                         <p class="uk-margin-medium">
@@ -335,10 +365,10 @@
 
                     <!--Grid 3-->
                     <div>
-                        <p style="color: rgba(17, 46, 40, 1)">
+                        <p style="color: rgb(0, 0, 0)">
                             <img src="assets/images/engineering_forest.svg" width="120" height="120" uk-svg>
                         </p>
-                        <h3 style="color:brown">
+                        <h3 style="color:green">
                             Effective Donations
                         </h3>
                         <p class="uk-margin-medium">
@@ -360,10 +390,10 @@
 
                     <!--Grid 4-->
                     <div>
-                        <p style="color: green;">
+                        <p style="color: rgb(0, 0, 0);">
                             <img src="assets/images/fund-access.svg" width="120" height="120" uk-svg>
                         </p>
-                        <h3 style="color:brown">
+                        <h3 style="color:green">
                             Access to Funds
                         </h3>
                         <p class="uk-margin-medium">
@@ -376,10 +406,10 @@
 
                     <!--Grid 5-->
                     <div>
-                        <p style="color: green;">
+                        <p style="color: rgb(0, 0, 0);">
                             <img src="assets/images/zero-emission.svg" width="120" height="120" uk-svg>
                         </p>
-                        <h3 style="color:brown">
+                        <h3 style="color:green">
                             CO<sub>2</sub> Matching
                         </h3>
                         <p class="uk-margin-medium">
@@ -395,7 +425,7 @@
                         <p>
                             <img src="assets/images/transparency-2.svg" width="120" height="120" uk-svg>
                         </p>
-                        <h3 style="color:brown">
+                        <h3 style="color:green">
                             Transparency
                         </h3>
                         <p class="uk-margin-medium">
@@ -551,7 +581,7 @@
                             Redistribution of donations received at Genix<br>
                             is a primary concern. Traditional wire transfers <br>
                             can be difficult to arrange and inconvenient. <br>
-                            The Genix ecosystem allows convenient, and publicly 
+                            The Genix ecosystem allows convenient, and publicly
                             recorded remittance to occur anywhere in the world and on a peer-to-peer basis.
                         </p>
                     </div>
@@ -594,7 +624,8 @@
                         <div class="uk-tile uk-tile-default">
                             <p class="uk-h5">Price Info</p>
                             <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
-                            <coingecko-coin-ticker-widget coin-id="genix" currency="btc" locale="en"></coingecko-coin-ticker-widget>
+                            <coingecko-coin-ticker-widget coin-id="genix" currency="btc" locale="en">
+                            </coingecko-coin-ticker-widget>
                             <!--
                             <script type="text/javascript" src="https://unpkg.com/@coinpaprika/widget-currency/dist/widget.min.js"></script>
                             <div class="coinpaprika-currency-widget" data-primary-currency="usd" data-currency="genix-genix" data-modules='[]' data-update-active="false"></div>
@@ -603,14 +634,15 @@
                     </div>
                 </div>
 
-                <div class="uk-child-width-1-1 uk-child-width-1-2@s uk-grid-match uk-grid-collapse uk-text-center" uk-grid>
+                <div class="uk-child-width-1-1 uk-child-width-1-2@s uk-grid-match uk-grid-collapse uk-text-center"
+                    uk-grid>
 
                     <div>
-                            <div class="uk-tile uk-tile-muted">
-                                <p class="uk-h5">Ticker</p>
-                                <p class="uk-h3">GENIX</p>
-                            </div>
+                        <div class="uk-tile uk-tile-muted">
+                            <p class="uk-h5">Ticker</p>
+                            <p class="uk-h3">GENIX</p>
                         </div>
+                    </div>
                     <div>
                         <div class="uk-tile uk-tile-default">
                             <p class="uk-h5">Block Time</p>
@@ -618,22 +650,22 @@
                         </div>
                     </div>
                     <div>
-                            <div class="uk-tile uk-tile-default">
-                                <p class="uk-h5">Algo</p>
-                                <p class="uk-h3">x16r</p>
-                            </div>
+                        <div class="uk-tile uk-tile-default">
+                            <p class="uk-h5">Algo</p>
+                            <p class="uk-h3">x16r</p>
                         </div>
-                    <div>
-                            <div class="uk-tile uk-tile-muted">
-                                <p class="uk-h5">Current Supply</p>
-                                <p id="genixsupply"  class="uk-h3 uk-text-break"></p>
-                            </div>
                     </div>
                     <div>
-                            <div class="uk-tile uk-tile-muted">
-                                <p class="uk-h5">Active Masternodes</p>
-                                <p id="mnCount"  class="uk-h3 uk-text-break">1148 Masternodes</p>
-                            </div>
+                        <div class="uk-tile uk-tile-muted">
+                            <p class="uk-h5">Current Supply</p>
+                            <p id="genixsupply" class="uk-h3 uk-text-break"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-tile uk-tile-muted">
+                            <p class="uk-h5">Active Masternodes</p>
+                            <p id="mnCount" class="uk-h3 uk-text-break">1148 Masternodes</p>
+                        </div>
                     </div>
                     <div>
 
@@ -677,7 +709,7 @@
                         </div>
                     </div>
                     -->
-         
+
 
 
                 </div>
@@ -699,7 +731,7 @@
     </div>
     -->
 
-    
+
 
     <div id="wallets" class=" uk-section-default tm-section-texture uk-grid-collapse uk-text-center">
         <div class="uk-text-center">
@@ -714,13 +746,12 @@
                                 src="assets/images/windows-logo.png" width="60%" uk-img></a>
                     </div>
                     <div>
-                        <a href="https://github.com/genix-project/genix/releases"><img
-                                src="assets/images/macos.png" height="50%" uk-img></a>
+                        <a href="https://github.com/genix-project/genix/releases"><img src="assets/images/macos.png"
+                                height="50%" uk-img></a>
                     </div>
                     <div>
-                        <a
-                            href="https://github.com/genix-project/genix/releases"><img
-                                src="assets/images/ubuntu.png" width="80%" uk-img></a>
+                        <a href="https://github.com/genix-project/genix/releases"><img src="assets/images/ubuntu.png"
+                                width="80%" uk-img></a>
                     </div>
                     <div>
                         <a href="https://play.google.com/store/apps/details?id=com.genix"><img
@@ -748,35 +779,41 @@
                         <a class="uk-accordion-title uk-button uk-button-default uk-text-muted" href="#">Exchanges</a>
                         <div class="uk-accordion-content">
                             <div class=" uk-padding uk-child-width-1-2 uk-text-center" uk-grid>
-                                
+
                                 <div>
                                     <a class="uk-visible@s" href="https://www.swiftex.co/trading/genixbtc"><img
-                                            src="assets/images/swiftex-light.png"
-                                            alt="Swiftex Exchange" width="40%" uk-img></a>
+                                            src="assets/images/swiftex-light.png" alt="Swiftex Exchange" width="40%"
+                                            uk-img></a>
                                     <a class="uk-hidden@s" href="https://www.swiftex.co/trading/genixbtc"><img
-                                            src="assets/images/swiftex-light.png"
-                                            alt="Swiftex Exchange" width="100%" uk-img></a>
+                                            src="assets/images/swiftex-light.png" alt="Swiftex Exchange" width="100%"
+                                            uk-img></a>
                                 </div>
-                                
+
                                 <div>
-                                    <a class="uk-visible@s" href="https://cratex.io/index.php?pair=GENIX/BTC" target="_blank" class="uk-padding-remove footer-link">
-                                        <img src="assets/images/cratex.png" alt="Cratex Exchange" width ="40%" uk-img>
+                                    <a class="uk-visible@s" href="https://cratex.io/index.php?pair=GENIX/BTC"
+                                        target="_blank" class="uk-padding-remove footer-link">
+                                        <img src="assets/images/cratex.png" alt="Cratex Exchange" width="40%" uk-img>
                                     </a>
-                                    <a class="uk-hidden@s" href="https://cratex.io/index.php?pair=GENIX/BTC" target="_blank" class="uk-padding-remove footer-link">
-                                        <img src="assets/images/cratex.png" alt="Cratex Exchange" width ="100%" uk-img>
-                                    </a>
-                                </div>
-                                
-                                <div>
-                                    <a class="uk-visible@s" href="https://altmarkets.io/trading/genixbtc" target="_blank" class="uk-padding-remove footer-link">
-                                        <img src="assets/images/altmarkets.png" alt="Altmarkets Exchange" width ="40%" uk-img>
-                                    </a>
-                                    <a class="uk-hidden@s" href="https://altmarkets.io/trading/genixbtc" target="_blank" class="uk-padding-remove footer-link">
-                                        <img src="assets/images/altmarkets.png" alt="Altmarkets Exchange" width ="100%" uk-img>
+                                    <a class="uk-hidden@s" href="https://cratex.io/index.php?pair=GENIX/BTC"
+                                        target="_blank" class="uk-padding-remove footer-link">
+                                        <img src="assets/images/cratex.png" alt="Cratex Exchange" width="100%" uk-img>
                                     </a>
                                 </div>
 
-<!--                                
+                                <div>
+                                    <a class="uk-visible@s" href="https://altmarkets.io/trading/genixbtc"
+                                        target="_blank" class="uk-padding-remove footer-link">
+                                        <img src="assets/images/altmarkets.png" alt="Altmarkets Exchange" width="40%"
+                                            uk-img>
+                                    </a>
+                                    <a class="uk-hidden@s" href="https://altmarkets.io/trading/genixbtc" target="_blank"
+                                        class="uk-padding-remove footer-link">
+                                        <img src="assets/images/altmarkets.png" alt="Altmarkets Exchange" width="100%"
+                                            uk-img>
+                                    </a>
+                                </div>
+
+                                <!--                                
                                 <div>
                                     <a class="uk-visible@s" href="https://dex.delion.online/market/DELION.GENIX_DELION.BTC" target="_blank" class="uk-padding-remove footer-link">
                                         <img src="assets/images/delion.png" alt="Delion Exchange" width ="40%" uk-img>
@@ -797,11 +834,10 @@
                             <div class="uk-padding uk-child-width-1-2 uk-text-center" uk-grid>
                                 <div>
                                     <a class="uk-visible@s" href="https://onetreeplanted.org"><img
-                                            src="assets/images/onetree.png"
-                                            alt="onetreeplanted" width="40%" uk-img></a>
+                                            src="assets/images/onetree.png" alt="onetreeplanted" width="40%" uk-img></a>
                                     <a class="uk-hidden@s" href="https://onetreeplanted.org"><img
-                                            src="assets/images/onetree.png"
-                                            alt="onetreeplanted" width="100%" uk-img></a>
+                                            src="assets/images/onetree.png" alt="onetreeplanted" width="100%"
+                                            uk-img></a>
                                 </div>
                             </div>
                         </div>
@@ -813,19 +849,19 @@
                             <div class="uk-padding uk-child-width-1-2 uk-text-center" uk-grid>
                                 <div>
                                     <a class="uk-visible@s" href="https://mn.gtmcoin.io"><img
-                                            src="assets/images/gentarium.png"
-                                            alt="Gentarium Masternode Hosting" width="40%" uk-img></a>
+                                            src="assets/images/gentarium.png" alt="Gentarium Masternode Hosting"
+                                            width="40%" uk-img></a>
                                     <a class="uk-hidden@s" href="https://mn.gtmcoin.io"><img
-                                            src="assets/images/gentarium.png"
-                                            alt="Gentarium Masternode Hosting" width="100%" uk-img></a>
+                                            src="assets/images/gentarium.png" alt="Gentarium Masternode Hosting"
+                                            width="100%" uk-img></a>
                                 </div>
                                 <div>
                                     <a class="uk-visible@s" href="https://ihostmn.com/hostmn.php?coin=GENIX"><img
-                                            src="assets/images/ihostmn.png"
-                                            alt="Ihostmn Masternode Hosting & Sharing" width="40%" uk-img></a>
+                                            src="assets/images/ihostmn.png" alt="Ihostmn Masternode Hosting & Sharing"
+                                            width="40%" uk-img></a>
                                     <a class="uk-hidden@s" href="https://ihostmn.com/hostmn.php?coin=GENIX"><img
-                                            src="assets/images/ihostmn.png"
-                                            alt="Ihostmn Masternode Hosting & Sharing" width="100%" uk-img></a>
+                                            src="assets/images/ihostmn.png" alt="Ihostmn Masternode Hosting & Sharing"
+                                            width="100%" uk-img></a>
                                 </div>
                             </div>
                         </div>
@@ -838,50 +874,47 @@
 
                                 <div>
                                     <a class="uk-visible@s" href="https://www.coingecko.com/en/coins/genix"><img
-                                        src="assets/images/coingecko.png"
-                                        alt="Blockfolio Porfolio Tracker" width="40%" uk-img></a>
-                                <a class="uk-hidden@s" href="https://www.coingecko.com/en/coins/genix"><img
-                                        src="assets/images/coingecko.png"
-                                        alt="Blockfolio Porfolio Tracker" width="100%" uk-img></a>
+                                            src="assets/images/coingecko.png" alt="Blockfolio Porfolio Tracker"
+                                            width="40%" uk-img></a>
+                                    <a class="uk-hidden@s" href="https://www.coingecko.com/en/coins/genix"><img
+                                            src="assets/images/coingecko.png" alt="Blockfolio Porfolio Tracker"
+                                            width="100%" uk-img></a>
                                 </div>
-                                
+
                                 <div>
                                     <a class="uk-visible@s" href="https://blockfolio.com"><img
-                                        src="assets/images/blockfolio-white.svg"
-                                        alt="Blockfolio Porfolio Tracker" width="40%" uk-svg></a>
-                                <a class="uk-hidden@s" href="https://blockfolio.com"><img
-                                        src="assets/images/blockfolio-white.svg"
-                                        alt="Blockfolio Porfolio Tracker" width="100%" uk-svg></a>
+                                            src="assets/images/blockfolio-white.svg" alt="Blockfolio Porfolio Tracker"
+                                            width="40%" uk-svg></a>
+                                    <a class="uk-hidden@s" href="https://blockfolio.com"><img
+                                            src="assets/images/blockfolio-white.svg" alt="Blockfolio Porfolio Tracker"
+                                            width="100%" uk-svg></a>
                                 </div>
 
                                 <div>
                                     <a class="uk-visible@s" href="https://coinpaprika.com/coin/genix-genix/"><img
-                                        src="assets/images/coinpaprika.png"
-                                        alt="Coinpaprika" width="40%" uk-img></a>
+                                            src="assets/images/coinpaprika.png" alt="Coinpaprika" width="40%"
+                                            uk-img></a>
                                     <a class="uk-hidden@s" href="https://coinpaprika.com/coin/genix-genix/"><img
-                                        src="assets/images/coinpaprika.png"
-                                        alt="Coinpaprika" width="100%" uk-img></a>
+                                            src="assets/images/coinpaprika.png" alt="Coinpaprika" width="100%"
+                                            uk-img></a>
                                 </div>
-                                
+
 
                                 <div>
                                     <a class="uk-visible@s" href="https://www.mnroi.info/coin/GENIX"><img
-                                        src="assets/images/mnroi.png"
-                                        alt="MN ROI" width="40%" uk-img></a>
-                                <a class="uk-hidden@s" href="https://www.mnroi.info/coin/GENIX"><img
-                                        src="assets/images/mnroi.png"
-                                        alt="MN ROI" width="100%" uk-img></a>
+                                            src="assets/images/mnroi.png" alt="MN ROI" width="40%" uk-img></a>
+                                    <a class="uk-hidden@s" href="https://www.mnroi.info/coin/GENIX"><img
+                                            src="assets/images/mnroi.png" alt="MN ROI" width="100%" uk-img></a>
                                 </div>
 
                                 <div>
                                     <a class="uk-visible@s" href="https://blockspot.io/coin/genix/"><img
-                                        src="assets/images/blockspot.png"
-                                        alt="Blockspot" width="40%" height="40%" uk-img></a>
-                                <a class="uk-hidden@s" href="https://blockspot.io/coin/genix/"><img
-                                    src="assets/images/blockspot.png"
-                                        alt="Blockspot" width="100%" uk-img></a>
+                                            src="assets/images/blockspot.png" alt="Blockspot" width="40%" height="40%"
+                                            uk-img></a>
+                                    <a class="uk-hidden@s" href="https://blockspot.io/coin/genix/"><img
+                                            src="assets/images/blockspot.png" alt="Blockspot" width="100%" uk-img></a>
                                 </div>
-                               
+
 
                             </div>
                         </div>
@@ -959,7 +992,8 @@
                         <div>
                             <ul class="uk-text-left uk-nav uk-nav-default">
                                 <li>
-                                    <a href="http://explorer.genix.cx" target="_blank" class="uk-padding-remove footer-link">
+                                    <a href="http://explorer.genix.cx" target="_blank"
+                                        class="uk-padding-remove footer-link">
                                         Block Explorer
                                     </a>
                                 </li>
@@ -1029,32 +1063,33 @@
                         <div>
                             <ul class="uk-text-left uk-nav uk-nav-default">
                                 <li>
-                                    <a href="https://twitter.com/CORS_1ER" target="_blank"
+                                    <a href="https://discordapp.com/users/391384008140783617" target="_blank"
                                         class="uk-padding-remove footer-link">
-                                        CORS1ER - CEO
+                                        CORS1ER
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/TwinkyCx" target="_blank"
+                                    <a href="https://discordapp.com/users/115619332448321541" target="_blank"
                                         class="uk-padding-remove footer-link">
-                                        Twinky - CTO
+                                        Twinky
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/farsider350/" target="_blank"
+                                    <a href="https://discordapp.com/users/390374489688637440" target="_blank"
                                         class="uk-padding-remove footer-link">
-                                        Farsider - Lead Developer
+                                        Farsider350
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/veryrichard" target="_blank"
+                                    <a href="https://discordapp.com/users/488007343989325834" target="_blank"
                                         class="uk-padding-remove footer-link">
-                                        Chinces - Web Developer
+                                        Peristeri
                                     </a>
                                 </li>
-                                <li style="margin-bottom: 2%;">
-                                    <a href="#" target="_blank" class="uk-text-truncate uk-padding-remove footer-link">
-                                        Marinoff - Graphic Designer
+                                <li>
+                                    <a href="https://discordapp.com/users/405102339612082177" target="_blank"
+                                        class="uk-padding-remove footer-link">
+                                        Sean
                                     </a>
                                 </li>
                             </ul>
@@ -1079,12 +1114,12 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://bitcointalk.org/index.php?topic=5119926.msg50136270#msg50136270" target="_blank"
-                                        class="uk-padding-remove footer-link">
+                                    <a href="https://bitcointalk.org/index.php?topic=5119926.msg50136270#msg50136270"
+                                        target="_blank" class="uk-padding-remove footer-link">
                                         Third Party Pools
                                     </a>
                                 </li>
-                                
+
 
                             </ul>
                         </div>
@@ -1097,7 +1132,8 @@
                         <div>
                             <ul class="uk-text-left uk-nav uk-nav-default">
                                 <li>
-                                    <a href="https://swiftex.co/trading/genix-btc" target="_blank" class="uk-padding-remove footer-link">
+                                    <a href="https://swiftex.co/trading/genix-btc" target="_blank"
+                                        class="uk-padding-remove footer-link">
                                         Swiftex Exchange
                                     </a>
                                 </li>
@@ -1122,7 +1158,7 @@
                 </div>
                 <div class="uk-grid-small uk-child-width-1-1 uk-text-center">
                     <div>
-                        <p> &copy; Genix 2018 - 2019</p>
+                        <p> &copy; Genix 2018 - 2020</p>
 
                     </div>
                 </div>
@@ -1162,7 +1198,8 @@
                             <a class="header-link" href="http://explorer.genix.cx">Block Explorer</a>
                         </li>
                         <li>
-                            <a style="color:#65e52c !important;" class="header-link" href="https://teespring.com/stores/genix-store">Genix Store</a>
+                            <a style="color:#65e52c !important;" class="header-link"
+                                href="https://teespring.com/stores/genix-store">Genix Store</a>
                         </li>
                     </ul>
                 </div>
